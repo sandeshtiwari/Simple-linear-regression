@@ -20,6 +20,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 1/3, rando
 # The regressor is the trained machine
 from sklearn.linear_model import LinearRegression
 regressor = LinearRegression()
+# Training the regressor
 regressor.fit(X_train, y_train)
 
 # Predicting the Test set results- making vector with predicted salaries
