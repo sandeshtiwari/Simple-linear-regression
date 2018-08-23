@@ -33,3 +33,14 @@ plt.title("Salary vs Experience(Training set)")
 plt.xlabel("Years of Experience")
 plt.ylabel("Salary")
 plt.show()
+
+# Visualising the Test set results
+plt.scatter(X_test, y_test, color="red")
+# Drawing a line with the traing independent matrix and the predicted 
+# dependent vector of the training data. The regressor is trained so the line will be the same
+# So the X_test and X_train will give the same line for the regressor
+plt.plot(X_test, regressor.predict(X_test), color="blue")
+plt.title("Salary vs Experience(Test set)")
+plt.xlabel("Years of Experience")
+plt.ylabel("Salary")
+plt.show()
