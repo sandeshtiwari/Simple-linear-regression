@@ -24,3 +24,12 @@ regressor.fit(X_train, y_train)
 
 # Predicting the Test set results- making vector with predicted salaries
 y_pred = regressor.predict(X_test)
+
+# Visualising the Training set results
+plt.scatter(X_train, y_train, color="red")
+# Drawing a line with the traing independent matrix and the predicted dependent vector of the training data
+plt.plot(X_train, regressor.predict(X_train), color="blue")
+plt.title("Salary vs Experience(Training set)")
+plt.xlabel("Years of Experience")
+plt.ylabel("Salary")
+plt.show()
